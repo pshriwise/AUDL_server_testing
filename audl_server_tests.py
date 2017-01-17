@@ -31,7 +31,9 @@ def print_test_outcome(err_val):
             print txtgrn + "SUCCESS" + txtwht
 
 def invalid_data(response):
-    if response.lower().find("not a valid path") is not -1:
+    if len(response) <= 0:
+        return 1
+    elif response.lower().find("not a valid path") is not -1:
         return 1
     elif response.lower().find("N/A") is not -1:
         return 1
