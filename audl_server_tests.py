@@ -37,6 +37,8 @@ def invalid_data(response):
         return 1
     elif response.lower().find("N/A") is not -1:
         return 1
+    elif response.lower().find("N/A") is not -1:
+        return 1
     else:
         return 0
 
