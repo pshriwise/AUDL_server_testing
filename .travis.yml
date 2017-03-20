@@ -5,7 +5,6 @@ notifications:
     recipients:
       - pshriwise@gmail.com
 services: docker
-
 install:
   - sudo docker pull pshriwise/audl_img
 script:
