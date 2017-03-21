@@ -8,5 +8,5 @@ services: docker
 install:
   - sudo docker pull pshriwise/audl_img
 script:
-  - sudo docker run pshriwise/audl_img /bin/sh -C "git clone https://github.com/pshriwise/audl_server_testing && cd audl_server_testing && python audl_server_test.py"
+  - sudo docker run pshriwise/audl_img /bin/sh -c "git clone https://github.com/pshriwise/audl_server_testing && cd audl_server_testing && python audl_server_tests.py"
   
