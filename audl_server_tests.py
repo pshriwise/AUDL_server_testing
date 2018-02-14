@@ -18,7 +18,7 @@ txtwht='\033[0m' # White
 endpnts = ['Teams','News','Standings','Scores','Schedule',
            'Videos','Stats','AllGames','FAQ','Terms_and_Info','Home']
 
-base_url='http://ec2-52-7-194-101.compute-1.amazonaws.com'
+base_url='https://audl-stat-server.herokuapp.com/aa/'
 port = '4001'
 
 def print_test(url):
