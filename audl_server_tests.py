@@ -19,7 +19,6 @@ endpnts = ['Teams','News','Standings','Scores','Schedule',
            'Videos','Stats','AllGames','FAQ','Terms_and_Info','Home']
 
 base_url='https://audl-stat-server.herokuapp.com/aa/'
-port = '4001'
 
 def print_test(url):
         print txtylw + "Testing endpoint "+ url + txtwht
@@ -65,7 +64,7 @@ def main():
     ret_val = 0
     #check each of the main endpoints of the server
     for pnt in endpnts:
-        url=base_url+":"+port+"/"+pnt
+        url=base_url+pnt
         result, data = test_url(url)
         print_test_outcome(result)
         ret_val += result
@@ -75,7 +74,7 @@ def main():
             if "Teams" == pnt:
                 for team in data:
                     team_id = str(team[1])
-                    team_url = base_url+':'+port+'/'+pnt+'/'+team_id
+                    team_url = base_url+pnt+'/'+team_id
                     #test main team page
                     result, team_data = test_url(team_url)
                     print_test_outcome(result)
@@ -83,7 +82,7 @@ def main():
                     for game in team_data[1][2:]: #this is why the server is bad
                         #test team scores page
                         date = str(game[0])
-                        result, dum = test_url(base_url+':'+port+'/Game/'+team_id+'/'+date)
+                        result, dum = test_url(base_url+'Game/'+team_id+'/'+date)
                         print_test_outcome(result)
                         ret_val += result
                     
