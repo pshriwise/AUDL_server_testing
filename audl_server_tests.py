@@ -16,7 +16,7 @@ txtcyn='\033[36m' # Cyan
 txtwht='\033[0m' # White
 
 endpnts = ['Teams','News','Standings','Scores','Schedule',
-           'Videos','Stats','AllGames','FAQ','Terms_and_Info','Home']
+           'Videos','Stats','Home']
 
 base_url='https://audl-stat-server.herokuapp.com/aa/'
 
